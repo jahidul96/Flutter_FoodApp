@@ -13,10 +13,13 @@ class SliderCardContentWidget extends StatelessWidget {
       padding: const EdgeInsets.all(15),
       child: Column(
         children: [
-          TextWidget(
-            text: "Product Name",
-            size: 16,
-            fontWeight: FontWeight.w600,
+          Container(
+            alignment: Alignment.topLeft,
+            child: TextWidget(
+              text: "ProductName",
+              size: 16,
+              fontWeight: FontWeight.w600,
+            ),
           ),
           Container(
             margin: const EdgeInsets.only(top: 12),
@@ -29,7 +32,7 @@ class SliderCardContentWidget extends StatelessWidget {
                   size: 12,
                 ),
                 TextWidget(
-                  text: "100 order's",
+                  text: "10 order",
                   size: 12,
                 )
               ],

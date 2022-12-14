@@ -23,7 +23,7 @@ class CardBottomContent extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(left: 5),
                 child: TextWidget(
-                  text: "Location",
+                  text: "ctg",
                   size: 12,
                 ),
               )
@@ -38,7 +38,7 @@ class CardBottomContent extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(left: 5),
                 child: TextWidget(
-                  text: "10-15 mins",
+                  text: "30mins",
                   size: 12,
                 ),
               )
