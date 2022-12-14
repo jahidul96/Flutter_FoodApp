@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test_app/components/CardBottomContent.dart';
 import 'package:flutter_test_app/components/RatingIconWidget.dart';
 import 'package:flutter_test_app/components/TextWidget.dart';
+import 'package:flutter_test_app/components/reviewComp.dart';
 
 class SliderCardContentWidget extends StatelessWidget {
   const SliderCardContentWidget({super.key});
@@ -21,23 +22,7 @@ class SliderCardContentWidget extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(top: 12),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const RatingIconWidget(),
-                TextWidget(
-                  text: "4.5",
-                  size: 12,
-                ),
-                TextWidget(
-                  text: "10 order",
-                  size: 12,
-                )
-              ],
-            ),
-          ),
+          const ReviewCompWidget(),
           const CardBottomContent(),
         ],
       ),

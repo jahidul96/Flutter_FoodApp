@@ -3,7 +3,7 @@ import 'package:flutter_test_app/screens/details.dart';
 import 'package:flutter_test_app/screens/home.dart';
 
 void main() {
-  return runApp(const MyApp());
+  return runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: FoodDetails(),
     );
