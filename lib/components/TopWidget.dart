@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test_app/components/TextWidget.dart';
+import 'package:flutter_test_app/screens/register.dart';
 
 class TopWidget extends StatelessWidget {
   const TopWidget({super.key});
@@ -27,9 +30,17 @@ class TopWidget extends StatelessWidget {
                 )
               ],
             ),
-            const Icon(
-              Icons.person,
-              size: 30,
+            InkWell(
+              child: const Icon(
+                Icons.person,
+                size: 30,
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterPage()),
+                );
+              },
             )
           ],
         ),

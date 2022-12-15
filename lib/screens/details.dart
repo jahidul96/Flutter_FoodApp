@@ -43,10 +43,15 @@ class FoodDetails extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const IconWidget(
-                    icon: Icons.chevron_left,
-                    length: 40,
-                    iconsize: 25,
+                  InkWell(
+                    child: const IconWidget(
+                      icon: Icons.chevron_left,
+                      length: 40,
+                      iconsize: 25,
+                    ),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   const IconWidget(
                     icon: Icons.search,
@@ -76,7 +81,7 @@ class FoodDetails extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
+                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make. typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to ma",
                       style: TextStyle(height: 1.5),
                     ),
                   ],

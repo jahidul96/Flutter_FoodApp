@@ -1,6 +1,9 @@
+// ignore_for_file: unnecessary_new, avoid_unnecessary_containers
+
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test_app/components/sliderCardContent.dart';
+import 'package:flutter_test_app/screens/details.dart';
 import 'package:flutter_test_app/utils/_dimentions.dart';
 
 class SliderWidget extends StatefulWidget {
@@ -79,41 +82,49 @@ class _SliderWidgetState extends State<SliderWidget> {
 
     return Transform(
       transform: matrix,
-      child: Stack(
-        children: [
-          Container(
-            height: 180,
-            margin: const EdgeInsets.only(left: 8, right: 8, top: 10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              image: const DecorationImage(
-                image: AssetImage("assets/image/food1.jpg"),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: 110,
-              margin: const EdgeInsets.only(
-                  left: 25, right: 25, top: 20, bottom: 30),
+      child: InkWell(
+        child: Stack(
+          children: [
+            Container(
+              height: 180,
+              margin: const EdgeInsets.only(left: 8, right: 8, top: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 3,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
+                image: const DecorationImage(
+                  image: AssetImage("assets/image/food1.jpg"),
+                  fit: BoxFit.cover,
+                ),
               ),
-              child: const SliderCardContentWidget(),
             ),
-          ),
-        ],
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 110,
+                margin: const EdgeInsets.only(
+                    left: 25, right: 25, top: 20, bottom: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 3,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: const SliderCardContentWidget(),
+              ),
+            ),
+          ],
+        ),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FoodDetails()),
+          );
+        },
       ),
     );
   }
